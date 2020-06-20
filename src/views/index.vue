@@ -81,7 +81,7 @@ export default {
     };
   },
   mounted: function () {
-    // location.href.indexOf("openid") < 0 ? (window.location.href = "https://payjs.cn/api/openid?mchid=1578310381&callback_url=".concat(encodeURIComponent("http://stcdn.iijx.site/"))) : this.updateSignUpNumber();
+    location.href.indexOf("openid") < 0 ? (window.location.href = "https://payjs.cn/api/openid?mchid=1578310381&callback_url=".concat(encodeURIComponent("http://stcdn.iijx.site/"))) : this.updateSignUpNumber();
   },
   methods: {
     buyedBtn: function () {
@@ -117,6 +117,7 @@ export default {
       const that = this;
       this.$Http.post("/pay/api/wxJsPayParams", params)
         .then(res => {
+          console.log(res);
           if (res.success) {
             window.WeixinJSBridge.invoke("getBrandWCPayRequest", res.jsapi, function (r) {
                 if ("get_brand_wcpay_request:ok" == r.err_msg) {
