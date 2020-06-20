@@ -51,37 +51,15 @@ export default {
       price: 960,
       paying: false,
       signUpNumber: 10,
-      systemInfo_platform: "",
-      goods: [
-        {
-          name: "月度会员 · 1月",
-          isRecommend: !1,
-          price: 2.9,
-          oldPrice: 3,
-          memberType: "1",
-          rank: 1,
-        },
-        {
-          name: "半年会员 · 6月",
-          isRecommend: !1,
-          price: 5.8,
-          oldPrice: 6,
-          memberType: "2",
-          rank: 2,
-        },
-        {
-          name: "永久终身会员",
-          isRecommend: !0,
-          price: 9.6,
-          oldPrice: 69,
-          memberType: "3",
-          rank: 3,
-        },
-      ],
+      goods: [...this.$Config.goods],
     };
   },
   mounted: function () {
     location.href.indexOf("openid") < 0 ? (window.location.href = "https://payjs.cn/api/openid?mchid=1578310381&callback_url=".concat(encodeURIComponent("http://stcdn.iijx.site/"))) : this.updateSignUpNumber();
+
+    let recommenItem = this.goods.find(item => item.isRecommend);
+    this.price = Math.floor(recommenItem.price * 100);
+    this.memberType = recommenItem.memberType;
   },
   methods: {
     buyedBtn: function () {
