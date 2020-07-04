@@ -47,7 +47,7 @@ export default {
   name: "App",
   data() {
     return {
-      memberType: "3",
+      memberType: "4",
       price: 960,
       paying: false,
       signUpNumber: 10,
