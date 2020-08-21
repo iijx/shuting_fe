@@ -51,7 +51,7 @@ export default {
       price: 960,
       paying: false,
       signUpNumber: 10,
-      goods: [...this.$Config.goods],
+      goods: this.$Config.goods.filter(i => i.isOnline),
     };
   },
   mounted: function () {
