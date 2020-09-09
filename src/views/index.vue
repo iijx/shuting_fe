@@ -88,7 +88,7 @@ export default {
     },
     onSubmit: function () {
       const params = {
-        total_fee: this.price,
+        total_fee: parseInt(this.price),
         attach: JSON.stringify({ memberType: this.memberType }),
         openid: this.$Util.getUrlParams().openid,
       };
