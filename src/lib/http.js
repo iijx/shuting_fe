@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const http = axios.create({
-    baseURL: process.env.NODE_ENV === 'production' ? 'http://shuting.iijx.site' : '',
+    baseURL: process.env.NODE_ENV === 'production' ? 'https://shuting.iijx.site' : '',
 });
 
 http.interceptors.response.use(res => {

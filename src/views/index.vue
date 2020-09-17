@@ -64,6 +64,7 @@ export default {
   methods: {
     buyedBtn: function () {
       this.$router.push("buyed");
+      
     },
     updateSignUpNumber: function () {
       var t = 10,
@@ -95,7 +96,6 @@ export default {
       const that = this;
       this.$Http.post("/pay/api/wxJsPayParams", params)
         .then(res => {
-          console.log(res);
           if (res.success) {
             window.WeixinJSBridge.invoke("getBrandWCPayRequest", res.jsapi, function (r) {
                 if ("get_brand_wcpay_request:ok" == r.err_msg) {
