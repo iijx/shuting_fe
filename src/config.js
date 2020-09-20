@@ -2,8 +2,8 @@ export const goods = [
   {
     name: '数听会员 · 30天',
     isRecommend: false,
-    price: 4.9,
-    oldPrice: 6,
+    price: 6.0,
+    oldPrice: 9,
     memberType: '1',
     rank: 1,
     isOnline: true,
@@ -20,7 +20,7 @@ export const goods = [
   {
     name: '数听会员 · 365天',
     isRecommend: true,
-    price: 9.6,
+    price: 15,
     oldPrice: 36,
     memberType: '4',
     rank: 2,
@@ -38,7 +38,7 @@ export const goods = [
   {
       name: '终身会员 ',
       isRecommend: false,
-      price: 17,
+      price: 18,
       oldPrice: 68,
       memberType: '3',
       rank: 3,
