@@ -90,7 +90,10 @@ export default {
     onSubmit: function () {
       const params = {
         total_fee: parseInt(this.price),
-        attach: JSON.stringify({ memberType: this.memberType }),
+        attach: JSON.stringify({ 
+          memberType: this.memberType,
+          stopenid: this.$Util.getUrlParams().stid || ''
+        }),
         openid: this.$Util.getUrlParams().openid,
       };
       const that = this;

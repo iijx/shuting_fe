@@ -6,7 +6,7 @@ export const goods = [
     oldPrice: 9,
     memberType: '1',
     rank: 1,
-    isOnline: true,
+    isOnline: false,
   },
   {
       name: '半年会员 · 180天',
@@ -24,7 +24,7 @@ export const goods = [
     oldPrice: 36,
     memberType: '4',
     rank: 2,
-    isOnline: true,
+    isOnline: false,
   },
   {
       name: '三年会员 · 3 * 365天',
@@ -37,7 +37,7 @@ export const goods = [
   },
   {
       name: '终身会员 ',
-      isRecommend: false,
+      isRecommend: true,
       price: 18,
       oldPrice: 68,
       memberType: '3',
