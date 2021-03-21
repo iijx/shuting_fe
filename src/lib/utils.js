@@ -5,12 +5,10 @@
  */
 export const getUrlParams = url => {
     url = url || location.href;
-    if (url.indexOf('#') >= 0) {
-        url = url.substr(0, url.indexOf('#'));
-    }
     var obj = {};
     if (location.href.indexOf('?') > 0) {
         var params = url.substr(location.href.indexOf('?') + 1);
+        params = params.substr(0, params.indexOf('#') > 0 ? params.indexOf('#') : params.length);
         params = params.split('&');
         for (var i = 0; i < params.length; i++) {
             var tem = params[i].split('=');
