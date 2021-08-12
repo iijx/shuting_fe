@@ -21,7 +21,7 @@ export const goods = [
     name: '数听会员 · 365天',
     isRecommend: false,
     price: 18,
-    oldPrice: 36,
+    oldPrice: 33,
     memberType: '4',
     rank: 2,
     isOnline: true,
@@ -45,3 +45,27 @@ export const goods = [
       isOnline: true,
   },
 ];
+
+export const stiGoods = [
+  {
+    kitpackId: 'd81cd5415f93d0e901a3cce6579465eb',
+    name: '四级听力真题库',
+    price: 9.9,
+    totalFee: 990,
+    image: 'https://cdn.amathclass.cn/sti/appAssets/cet_book1.png'
+  },
+  {
+    kitpackId: '9f2a34705fdb0626000b1b8d61a597ac',
+    name: '六级听力真题库',
+    price: 9.9,
+    totalFee: 990,
+    image: 'https://cdn.amathclass.cn/sti/appAssets/cet_book2.png'
+  },
+  {
+    kitpackId: 'ce805e785ffd7dea041e27433f69983f',
+    name: '高考听力真题库',
+    price: 8.9,
+    totalFee: 890,
+    image: 'https://cdn.amathclass.cn/sti/appAssets/cet_book0.png'
+  },
+]

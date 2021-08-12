@@ -3,7 +3,12 @@ module.exports = {
     devServer: {
         proxy: 'http://shuting.iijx.site'
     },
-
+    configureWebpack:{
+        //引入cdn中的vue
+        // externals:{
+        //     'vue': 'Vue',
+        // }
+    },
     chainWebpack: config => {
         config.plugin('html').tap(option => {
             console.log(option);
